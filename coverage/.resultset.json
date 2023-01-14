@@ -1,18 +1,16 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sean/turing/m3/projects/lunch_and_learn/app/controllers/api/v1/recipes_controller.rb": {
+      "/Users/sean/turing/m3/projects/lunch_and_learn/app/services/rest_countries_service.rb": {
         "lines": [
           1,
           1,
-          1,
+          0,
           null,
-          null
-        ]
-      },
-      "/Users/sean/turing/m3/projects/lunch_and_learn/app/controllers/application_controller.rb": {
-        "lines": [
+          null,
           1,
+          0,
+          null,
           null
         ]
       },
@@ -24,8 +22,27 @@
         ],
         "branches": {
         }
+      },
+      "/Users/sean/turing/m3/projects/lunch_and_learn/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sean/turing/m3/projects/lunch_and_learn/app/controllers/api/v1/recipes_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1673583539
+    "timestamp": 1673643555
   }
 }
