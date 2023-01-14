@@ -1,11 +1,16 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sean/turing/m3/projects/lunch_and_learn/app/services/rest_countries_service.rb": {
+      "/Users/sean/turing/m3/projects/lunch_and_learn/app/services/edamam_service.rb": {
         "lines": [
           1,
           1,
           0,
+          0,
+          0,
+          0,
+          0,
+          null,
           null,
           null,
           1,
@@ -41,8 +46,23 @@
         ],
         "branches": {
         }
+      },
+      "/Users/sean/turing/m3/projects/lunch_and_learn/app/services/rest_countries_service.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1673643555
+    "timestamp": 1673729968
   }
 }
