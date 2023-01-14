@@ -1,10 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sean/turing/m3/projects/lunch_and_learn/app/facades/countries_facade.rb": {
+      "/Users/sean/turing/m3/projects/lunch_and_learn/app/poros/recipe.rb": {
         "lines": [
           1,
           1,
+          null,
+          1,
+          0,
+          0,
           0,
           0,
           null,
@@ -13,6 +17,32 @@
       },
       "/Users/sean/turing/m3/projects/lunch_and_learn/app/models/application_record.rb": {
         "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sean/turing/m3/projects/lunch_and_learn/app/facades/countries_facade.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sean/turing/m3/projects/lunch_and_learn/app/facades/recipes_facade.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0
@@ -79,6 +109,6 @@
         }
       }
     },
-    "timestamp": 1673731624
+    "timestamp": 1673734030
   }
 }
