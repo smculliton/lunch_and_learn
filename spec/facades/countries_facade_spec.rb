@@ -2,14 +2,8 @@ require 'rails_helper'
 
 RSpec.describe CountriesFacade do 
   describe '#random_country' do 
-    before(:each) do 
-      # VCR.insert_cassette('all_countries') do 
-      #   @countries = RestCountriesService.all_countries
-      #   # @country = CountriesFacade.random_country
-      # end
-    end
     it 'returns a random country' do 
-      VCR.insert_cassette('all_countries') do 
+      VCR.use_cassette('all_countries', allow_playback_repeats: true) do
         countries = RestCountriesService.all_countries
         country = CountriesFacade.random_country
 
