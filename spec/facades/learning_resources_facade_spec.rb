@@ -19,14 +19,14 @@ RSpec.describe LearningResourcesFacade do
     it 'returns photos from photo search' do 
       VCR.use_cassette('photos_from_laos') do 
         country = 'laos'
-        photos = LearningResourcesFacade.search_photos_by_country(country)
+        photos = LearningResourcesFacade.get_photos(country)
 
         expect(photos).to be_a Array
-        
+
         expect(photos).to all(be_a Photo)
         photos.each do |photo|
           expect(photo.alt_tag).to be_a String
-          expect(photo.youtube_video_id).to be_a String
+          expect(photo.url).to be_a String
         end
       end
     end
