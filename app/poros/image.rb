@@ -1,4 +1,4 @@
-class Photo
+class Image
   attr_reader :alt_tag, :url
   
   def initialize(data)

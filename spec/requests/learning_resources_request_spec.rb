@@ -4,13 +4,13 @@ RSpec.describe 'learning resources request' do
   describe 'GET /api/v1/learning_resources' do 
     context 'successful request' do 
       it 'returns learning resources for the country' do 
-        VCR.use_cassette('photos_from_laos') do 
+        VCR.use_cassette('images_from_laos') do 
           VCR.use_cassette('videos_about_laos') do 
             country = 'laos'
             params = { 'country' => country }
             get '/api/v1/learning_resources', params: params
             data = JSON.parse(response.body, symbolize_names: true)
-            attributes = data[:attributes] 
+            attributes = data[:data][:attributes] 
             
             expect(response.status).to eq(200)
             
