@@ -17,7 +17,7 @@ RSpec.describe LearningResourcesFacade do
 
   describe '#get_images' do 
     it 'returns images from image search' do 
-      VCR.use_cassette('images_from_laos') do 
+      VCR.use_cassette('images_of_laos') do 
         country = 'laos'
         images = LearningResourcesFacade.get_images(country)
 

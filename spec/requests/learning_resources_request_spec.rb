@@ -4,7 +4,7 @@ RSpec.describe 'learning resources request' do
   describe 'GET /api/v1/learning_resources' do 
     context 'successful request' do 
       it 'returns learning resources for the country' do 
-        VCR.use_cassette('images_from_laos') do 
+        VCR.use_cassette('images_of_laos') do 
           VCR.use_cassette('videos_about_laos') do 
             country = 'laos'
             params = { 'country' => country }

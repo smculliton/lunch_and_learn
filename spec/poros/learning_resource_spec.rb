@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe LearningResource do 
   describe '#initialize' do 
     before(:each) do
-      VCR.use_cassette('images_from_laos') do 
+      VCR.use_cassette('images_of_laos') do 
         VCR.use_cassette('videos_about_laos') do 
           @country = 'laos'
           images = LearningResourcesFacade.get_images(@country)
