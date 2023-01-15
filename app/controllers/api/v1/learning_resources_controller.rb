@@ -4,7 +4,7 @@ class Api::V1::LearningResourcesController < ApplicationController
   def index
     country = params[:country]
 
-    render json: { data: country }, status: 200
+    render json: LearningResourceSerializer.new(LearningResourcesFacade.get_learning_resources(country)), status: 200
   end
 
   private
