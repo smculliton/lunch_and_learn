@@ -11,4 +11,8 @@ class LearningResourcesFacade
       Photo.new(photo_data)
     end
   end
+
+  def self.get_learning_resources(country)
+    LearningResource.new(get_photos(country), get_video(country), country)
+  end
 end
