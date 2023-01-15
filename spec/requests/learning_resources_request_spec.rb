@@ -36,8 +36,30 @@ RSpec.describe 'learning resources request' do
     end
 
     context 'resources are not found for country' do 
-      it 'returns empty videos array'
-      it 'returns empty images array'
+      it 'returns empty videos array' do 
+        VCR.use_cassette('images_of_arrakis') do 
+          VCR.use_cassette('videos_about_arrakis') do 
+            country = 'arrakis'
+            params = { 'country' => country }
+            get '/api/v1/learning_resources', params: params
+            data = JSON.parse(response.body, symbolize_names: true)
+
+            expect(data[:data][:attributes][:video]).to eq({})
+          end
+        end
+      end
+      it 'returns empty images array' do 
+        VCR.use_cassette('images_of_absurdistan') do 
+          VCR.use_cassette('videos_about_absurdistan') do 
+            country = 'absurdistan'
+            params = { 'country' => country }
+            get '/api/v1/learning_resources', params: params
+            data = JSON.parse(response.body, symbolize_names: true)
+
+            expect(data[:data][:attributes][:images]).to eq([])
+          end
+        end
+      end
     end
 
     context 'unsuccessful request' do 

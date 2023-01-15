@@ -2,6 +2,8 @@ class LearningResourcesFacade
   def self.get_video(country)
     data = YoutubeService.search_videos_by_country(country)
     video_data = data[:items][0]
+    return {} if video_data.nil?
+
     Video.new(video_data)
   end
 
