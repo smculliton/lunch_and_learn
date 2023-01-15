@@ -7,7 +7,21 @@ RSpec.describe 'user registration request' do
       headers = { "CONTENT_TYPE" => "application/json", 'ACCEPT' => 'application/json' }
       post "/api/v1/users", params: body.to_json, headers: headers
 
-      # data = JSON.parse(response.body, symbolize_names: true)
+      data = JSON.parse(response.body, symbolize_names: true)
+      attributes = data[:data][:attributes]
+
+      expect(data).to have_key :data
+      expect(data[:data]).to have_key :type
+      expect(data[:data]).to have_key :id
+      expect(data[:data]).to have_key :attributes
+
+      expect(attributes).to have_key :name
+      expect(attributes[:name]).to eq('Athena Dao')
+
+      expect(attributes).to have_key :email
+      expect(attributes[:email]).to eq('athenadao@bestgirlever.com')
+
+      expect(attributes).to have_key :api_key
     end
   end
 end
