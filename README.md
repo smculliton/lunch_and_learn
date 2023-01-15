@@ -1,24 +1,3 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Get Recipes For a Particular Country
+* Testing should look for more than just the presence of attribute fields in the response. Testing should also determine which fields should NOT be present. (don’t send back unnecessary data in the response)
