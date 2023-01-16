@@ -9,7 +9,13 @@
 * test edge case if other params are missing
 
 ## README
-* finish API endpoints documentation
+* add delete endpoint documentation
+
+
+
+
+
+
 
 # README
 
