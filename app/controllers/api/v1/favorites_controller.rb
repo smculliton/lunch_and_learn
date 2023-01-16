@@ -1,9 +1,14 @@
 class Api::V1::FavoritesController < ApplicationController
   before_action :verify_user
+
   def create
     @user.favorites.create!(favorites_params)
 
     render json: SuccessSerializer.favorite_created, status: 201
+  end
+
+  def index
+    render json: FavoriteSerializer.new(@user.favorites), status: 200
   end
 
   private

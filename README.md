@@ -4,3 +4,6 @@
 
 ## Register User
 * make sure API key for users is unique
+
+## Add Favorites
+* test edge case that api key is not given
