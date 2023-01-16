@@ -41,6 +41,22 @@ RSpec.describe 'add favorites request', type: :request do
         expect(data[:errors]).to have_key :detail
         expect(data[:errors][:detail]).to eq('Key does not match any users in database')
       end
+
+      it 'returns error if no api key provided' do 
+        body = { 'country' => 'thailand', 'recipe_link' => 'www.reallygoodrecipes.com', 'recipe_title' => 'Best Crab Rangoon' }
+        headers = { 'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json' }
+        post '/api/v1/favorites', params: body.to_json, headers: headers
+
+        data = JSON.parse(response.body, symbolize_names: true)
+
+        expect(response.status).to eq 400 
+        expect(data).to have_key :errors
+        expect(data[:errors]).to have_key :status
+        expect(data[:errors]).to have_key :title
+        expect(data[:errors][:title]).to eq('MISSING PARAMS')
+        expect(data[:errors]).to have_key :detail
+        expect(data[:errors][:detail]).to eq('Missing required parameters: api_key')
+      end
     end
   end
 end

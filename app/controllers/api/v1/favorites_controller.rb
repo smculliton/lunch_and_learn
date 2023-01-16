@@ -1,5 +1,5 @@
 class Api::V1::FavoritesController < ApplicationController
-  before_action :verify_user
+  before_action :verify_params, :verify_user
 
   def create
     @user.favorites.create!(favorites_params)
@@ -13,10 +13,14 @@ class Api::V1::FavoritesController < ApplicationController
 
   private
 
+  def verify_params
+    render json: ErrorSerializer.missing_params('api_key'), status: 400 unless params[:api_key]
+  end
+
   def verify_user
     @user = User.find_by(api_key: params[:api_key])
 
-    render json: ErrorSerializer.bad_api_key, status: 401 if @user.nil?
+    render json: ErrorSerializer.bad_api_key, status: 401 unless @user
   end
 
   def favorites_params
