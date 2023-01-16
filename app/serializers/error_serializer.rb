@@ -38,7 +38,7 @@ class ErrorSerializer
       {
         status: 401,
         title: 'BAD FAVORITE ID',
-        detail: 'Favorite ID does not match any favorites in database'
+        detail: 'Favorite ID does not match any of authenticated users favorites'
       }
     }
   end
