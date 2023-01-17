@@ -1,6 +1,6 @@
 class LearningResourceSerializer
   include JSONAPI::Serializer
 
-  attributes :video, :images, :country 
+  attributes :country, :video, :images
   set_id { nil }
 end
