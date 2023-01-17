@@ -42,4 +42,15 @@ class ErrorSerializer
       }
     }
   end
+
+  def self.unrecognized_credentials
+    {
+      errors: 
+      {
+        status: 400,
+        title: 'UNRECOGNIZED CREDENTIALS',
+        detail: 'Given username/password combination does not match any in database'
+      }
+    }
+  end
 end
