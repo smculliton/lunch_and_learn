@@ -55,7 +55,7 @@ RSpec.describe 'delete favorites request' do
         data = JSON.parse(response.body, symbolize_names: true)
 
         expect(response.status).to eq 401
-        expect(data).to have_key :error
+        expect(data).to have_key :errors
       end
 
       it 'returns error if favorite does not belong to user' do 
