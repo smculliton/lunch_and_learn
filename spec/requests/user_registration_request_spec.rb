@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'user registration request' do
   describe 'POST /api/v1/users', type: :request do
     it 'creates a new user and returns user info' do
-      body = { "name" => 'Athena Dao', "email" => 'athenadao@bestgirlever.com' }
+      body = { "name" => 'Athena Dao', "email" => 'athenadao@bestgirlever.com', 'password' => 'password', 'password_confirmation' => 'password' }
       headers = { "CONTENT_TYPE" => "application/json", 'ACCEPT' => 'application/json' }
       post "/api/v1/users", params: body.to_json, headers: headers
 
@@ -28,7 +28,7 @@ RSpec.describe 'user registration request' do
 
     describe 'sad paths' do 
       it 'returns error if user with email already exists' do 
-        User.create!(name: 'Athena Dao', email: 'athenadao@bestgirlever.com')
+        create(:user, email: 'athenadao@bestgirlever.com')
 
         body = { "name" => 'Athena Dao', "email" => 'athenadao@bestgirlever.com' }
         headers = { "CONTENT_TYPE" => "application/json", 'ACCEPT' => 'application/json' }

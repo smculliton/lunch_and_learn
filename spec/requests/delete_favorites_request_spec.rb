@@ -51,7 +51,7 @@ RSpec.describe 'delete favorites request' do
         user = create(:user)
         favorite = create(:favorite, user_id: user.id)
 
-        delete '/api/v1/favorites', params: { api_key: user.id, favorite_id: favorite.id + 1 }
+        delete '/api/v1/favorites', params: { api_key: user.api_key, favorite_id: favorite.id + 1 }
         data = JSON.parse(response.body, symbolize_names: true)
 
         expect(response.status).to eq 401
@@ -63,11 +63,14 @@ RSpec.describe 'delete favorites request' do
         user2 = create(:user)
         favorite = create(:favorite, user_id: user.id)
 
-        delete '/api/v1/favorites', params: { api_key: user2.id, favorite_id: favorite.id }
+        delete '/api/v1/favorites', params: { api_key: user2.api_key, favorite_id: favorite.id }
         data = JSON.parse(response.body, symbolize_names: true)
-
+        
         expect(response.status).to eq 401
         expect(data).to have_key :errors
+        expect(data[:errors]).to have_key :status
+        expect(data[:errors]).to have_key :title
+        expect(data[:errors]).to have_key :detail
       end
     end
   end

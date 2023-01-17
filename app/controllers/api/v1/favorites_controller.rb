@@ -37,7 +37,7 @@ class Api::V1::FavoritesController < ApplicationController
   def verify_favorite
     @favorite = Favorite.find_by(id: params[:favorite_id])
 
-    render json: ErrorSerializer.bad_favorite_id('favorite_id'), status: 401 unless @favorite && @favorite.user == @user
+    render json: ErrorSerializer.bad_favorite_id, status: 401 unless @favorite && @favorite.user == @user
   end
 
   def favorites_params
