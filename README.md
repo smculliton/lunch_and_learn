@@ -13,7 +13,7 @@ Lunch and Learn is the API for an app that allows you to learn about a country w
 
 
 ## Learning Goals
-- Expose an API that aggregates data from multiple external APIs
+- Expose an API that aggregates data from four different external APIs
 - Expose an API that requires an authentication token
 - Expose an API for CRUD functionality
 - Determine completion criteria based on the needs of other developers
