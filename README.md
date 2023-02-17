@@ -150,10 +150,6 @@ Lastly, head to your web browser or Postman. The base URL is `localhost:3000` an
  <details close>
  <summary>POST /api/v1/favorites</summary>
   > add a favorite recipe to a registered user
-   
-  | Path Parameter        | Type          |  |
-  | ------------- |:-------------:| -----:|
-  | api_key      | string | Required |
   
   Request Body JSON Example: 
   ```
