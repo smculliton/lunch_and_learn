@@ -9,14 +9,15 @@
 * [API Endpoints](#api-endpoints)
 
 ## General Info
-README for Lunch and Learn app backend. Exposes endpoints to provide recipes, learning resources, and user data for front end consumption.
+Lunch and Learn is the API for an app that allows you to learn about a country while also suggesting recipes to try from that country's cuisine. This project was made as part of the requirements to pass Mod 3 at [Turing School of Software and Design](https://turing.edu/)
+
 
 ## Learning Goals
 - Expose an API that aggregates data from multiple external APIs
 - Expose an API that requires an authentication token
 - Expose an API for CRUD functionality
 - Determine completion criteria based on the needs of other developers
-- Test both API consumption and exposure, making use of at least one mocking tool (VCR, Webmock, etc)
+- Test both API consumption and exposure while mocking requests to save on expensive API calls
 
 ## Database Design
 
