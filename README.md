@@ -21,7 +21,8 @@ Lunch and Learn is the API for an app that allows you to learn about a country w
 
 ## Database Design
 
-Pending
+![Lunch and Learn Schema](https://user-images.githubusercontent.com/108320490/219519718-4dc023d9-740e-4c3e-9051-bbfcc072e910.png)
+
 
 ## Technologies
 - Ruby 2.7.4
@@ -42,7 +43,9 @@ rails s
 Lastly, head to your web browser or Postman. The base URL is `localhost:3000` and endpoints are listed below.
 
 ## API Endpoints
-- ### GET /api/v1/recipes
+
+<details close>
+<summary>GET /api/v1/recipes</summary
   > get recipes from a specified or random country
   
   | Path Parameter        | Type          |  |
@@ -78,8 +81,10 @@ Lastly, head to your web browser or Postman. The base URL is `localhost:3000` an
   }
   ```
 <br> 
+</details>
 
-- ### GET /api/v1/learning_resources
+<details close>
+  <summary>GET /api/v1/learning_resources</summary>
   > get learning resources for a specified country 
   
   | Path Parameter        | Type          |  |
@@ -111,8 +116,10 @@ Lastly, head to your web browser or Postman. The base URL is `localhost:3000` an
   }
   ```
 <br> 
+  </details>
 
-- ### POST /api/v1/users
+  <details close>
+    <summary>POST /api/v1/users</summary>
   > registers a new user and returns api key 
   
   Request Body JSON Example: 
@@ -138,9 +145,15 @@ Lastly, head to your web browser or Postman. The base URL is `localhost:3000` an
   }
   ```
 <br> 
-
-- ### POST /api/v1/favorites
+</details>
+    
+ <details close>
+ <summary>POST /api/v1/favorites</summary>
   > add a favorite recipe to a registered user
+   
+  | Path Parameter        | Type          |  |
+  | ------------- |:-------------:| -----:|
+  | api_key      | string | Required |
   
   Request Body JSON Example: 
   ```
@@ -159,8 +172,9 @@ Lastly, head to your web browser or Postman. The base URL is `localhost:3000` an
   }
   ```
 <br>
-
-- ### GET /api/v1/favorites
+      </details>
+      <details close>
+        <summary>GET /api/v1/favorites</summary>
   > get all of a user's favorite recipes
 
   | Path Parameter        | Type          |  |
@@ -196,3 +210,4 @@ Lastly, head to your web browser or Postman. The base URL is `localhost:3000` an
   }
   ```
 <br>
+</details>
