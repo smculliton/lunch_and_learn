@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do 
       resources :recipes, only: :index
       resources :learning_resources, only: :index
-      resources :users, only: :create
+      resources :users, only: %i[create index]
       resources :favorites, only: %i[create index]
       resources :sessions, only: %i[create destroy]
 
