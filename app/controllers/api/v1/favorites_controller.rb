@@ -8,7 +8,7 @@ class Api::V1::FavoritesController < ApplicationController
 
   def create
     @user.favorites.create!(favorites_params)
-
+    
     render json: SuccessSerializer.favorite_created, status: 201
   end
 
@@ -41,6 +41,6 @@ class Api::V1::FavoritesController < ApplicationController
   end
 
   def favorites_params
-    params.permit(:recipe_link, :recipe_title, :country)
+    params.permit(:recipe_link, :recipe_title, :country, :image_url)
   end
 end
