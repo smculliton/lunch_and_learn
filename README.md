@@ -11,6 +11,8 @@
 ## General Info
 Lunch and Learn is the API for an app that allows you to learn about a country while also suggesting recipes to try from that country's cuisine. This project was made as part of the requirements to pass Mod 3 at [Turing School of Software and Design](https://turing.edu/)
 
+The API can be found deployed at ``https://lunch-and-learn-be.herokuapp.com/``
+
 
 ## Learning Goals
 - Expose an API that aggregates data from four different external APIs
